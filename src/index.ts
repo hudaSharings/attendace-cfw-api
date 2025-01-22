@@ -1,18 +1,25 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Bind resources to your worker in `wrangler.json`. After adding bindings, a type definition for the
- * `Env` object can be regenerated with `npm run cf-typegen`.
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+import attendanceController from "./Controller/attendanceController";
+import authController from "./Controller/authController";
+import locationController from "./Controller/locationController";
+import shiftController from "./Controller/shiftController";
+import userController from "./Controller/userController";
+import workdayController from "./Controller/workdayController";
+import employeesController from "./Controller/employeesController";
+import appHono from "./honoApp";
 
-export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
-	},
-} satisfies ExportedHandler<Env>;
+appHono.get('/', async (c) => {
+	return c.json({ message: 'Hello World!' });
+}
+);
+
+appHono.route('/api',authController)
+appHono.route('/api',userController)
+appHono.route('/api',employeesController)
+appHono.route('/api',locationController)
+appHono.route('/api',shiftController)
+appHono.route('/api',workdayController)
+appHono.route('/api',attendanceController)
+appHono.route('/api',shiftController)
+
+
+export default appHono
