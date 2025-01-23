@@ -6,6 +6,7 @@ import userController from "./Controller/userController";
 import workdayController from "./Controller/workdayController";
 import employeesController from "./Controller/employeesController";
 import appHono from "./honoApp";
+import clientController from "./Controller/clientController";
 
 appHono.get('/', async (c) => {
 	return c.json({ message: 'Hello World!' });
@@ -20,6 +21,7 @@ appHono.route('/api',shiftController)
 appHono.route('/api',workdayController)
 appHono.route('/api',attendanceController)
 appHono.route('/api',shiftController)
+appHono.route('/api',clientController)
 
 
 export default appHono

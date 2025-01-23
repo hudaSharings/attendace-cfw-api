@@ -5,8 +5,8 @@ import { auditSchema } from "./audit";
 export const tableName = 'workDaySetups';
 
 export const tableDefinition = {
-    ClientId: uuid('clientId'),
-    EmployeeId: uuid('employeeId'),
+    ClientId: integer('clientId'),
+    EmployeeId: integer('employeeId'),
     WorkdayPeriodID:integer('workdayPeriodId'),
     ShiftID:integer('shiftId'),
     Weekday:text('weekday'),

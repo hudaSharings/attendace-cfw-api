@@ -4,8 +4,8 @@ import { auditSchema } from "./audit";
 export const tableName = 'locations';
 
 export const tableDefinition = {
-    clientId: uuid('clientId'),
-    employeeId: uuid('employeeId'),
+    clientId: integer('clientId'),
+    employeeId: integer('employeeId'),
     name:text('name'),
     latlong:text('latlong'),
     range:integer('range'),

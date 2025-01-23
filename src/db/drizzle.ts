@@ -1,4 +1,4 @@
-import { user, organizations, organizationUsers, shift, shiftSplit, workDayPeriod, workDaySetup, location } from "./schema";
+import { user, organizations, organizationUsers, shift, shiftSplit, workDayPeriod, workDaySetup, location, client, employee } from "./schema";
 export const tables = {
     users: user,
     organizations,
@@ -7,7 +7,9 @@ export const tables = {
     shiftSplits: shiftSplit,
     workDayPeriods: workDayPeriod,
     workDaySetups: workDaySetup,
-    locations:location
+    locations:location,
+    clients:client,
+    employees:employee
 }
 
 export default tables

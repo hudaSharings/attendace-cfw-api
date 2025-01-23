@@ -1,12 +1,12 @@
-import { date, pgTable, uuid } from "drizzle-orm/pg-core";
+import { date, integer, pgTable, uuid } from "drizzle-orm/pg-core";
 import { auditSchema } from "./audit";
 
 
 export const tableName = 'workDayPeriods';
 
 export const tableDefinition = {
-    ClientId: uuid('clientId'),
-    EmployeeId: uuid('employeeId'),
+    ClientId: integer('clientId'),
+    EmployeeId: integer('employeeId'),
     EfecctiveFrom: date('effectiveFrom'),
     EffectiveTo: date('effectiveTo')    
 }

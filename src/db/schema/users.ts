@@ -1,4 +1,4 @@
-import { pgTable, text, uuid } from "drizzle-orm/pg-core";
+import { integer, pgTable, text, uuid } from "drizzle-orm/pg-core";
 import { auditSchema } from "./audit";
 
 export const tableName = 'users';
@@ -10,7 +10,7 @@ export const tableDefinition = {
   mobileNumber:text('mobileNumber'),
   password:text('password'),
   userType:text('userType'),
-  employeeId:uuid('employeeId')
+  employeeId:integer('employeeId')
 };
 
 export const user = pgTable(tableName,{

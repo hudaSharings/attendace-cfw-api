@@ -1,10 +1,10 @@
-import { boolean, pgTable, text, uuid } from 'drizzle-orm/pg-core';
+import { boolean, integer, pgTable, text, uuid } from 'drizzle-orm/pg-core';
 import { auditSchema } from './audit';
 
 export const tableName = 'shifts';
 
 export const tableDefinition = {
-	ClientId: uuid('clientId'),
+	ClientId: integer('clientId'),
 	Name: text('name'),
 	FromTime: text('fromTime'),
 	ToTime: text('toTime'),

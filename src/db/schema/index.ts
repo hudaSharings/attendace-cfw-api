@@ -1,3 +1,4 @@
+import employee, { client } from './employee';
 import location from './location';
 import organizations from './organization';
 import organizationUsers from './organizationUsers';
@@ -7,4 +8,4 @@ import user from './users';
 import workDayPeriod from './WorkDayPeriod';
 import workDaySetup from './WorkDaySetup';
 
-export { user,organizations,organizationUsers, shift, shiftSplit, workDayPeriod, workDaySetup,location };
+export { user, organizations, organizationUsers, shift, shiftSplit, workDayPeriod, workDaySetup, location, client, employee };
